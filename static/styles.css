@@ -1,0 +1,166 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFECDA;
+}
+
+#header {
+    text-align: center;
+    padding-top: 8vh;
+}
+
+h1 {
+    font-size: 5vw;
+    color: #1E151C;
+}
+
+h2 {
+    font-size: 2vw;
+    color: #59382C;
+    margin-top: 2vh;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-weight: normal;
+}
+
+.next-button {
+    background-color: #CD7A98;
+    color: #1E151C;
+    font-size: 1.8vw;
+    padding: 1vw 2vw;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 3vh;
+    font-weight: bold;
+}
+
+.landing-image {
+    position: relative;
+    display: block;
+    max-width: 80vw;
+    margin: 0 auto;
+    margin-top: 5vh;
+    object-position: bottom;
+    height: 40vh;
+}
+
+#form_instructions {
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 5vh;
+    color: #59382C;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form_container {
+    background-color: #ecacc3;
+    border: 5px solid #CD7A98;
+    width: 50vw;
+    margin: 10vh auto;
+    padding: 2vw;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.form_input {
+    font-size: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 1vw;
+    margin: 10px 0;
+    font-size: 1.2vw;
+    border: 2px solid #CD7A98;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.next-button-form {
+    background-color: #59382C;
+    color: #FFECDA;
+    font-size: 1.8vw;
+    padding: 1vw 2vw;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 3vh;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 5vh;
+}
+
+#party-details {
+    text-align: center;
+    font-size: 1.5vw;
+    margin-top: 2vh;
+    color: #59382C;
+}
+
+#supplies-list {
+    background-color: #ecacc3;
+    border: 5px solid #CD7A98;
+    width: 60vw;
+    margin: 5vh auto;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    padding-bottom: 2vw;
+    padding-top: 0.5vw;
+    border-radius: 20px;
+}
+
+#supplies-list h3 {
+    text-align: center;
+    font-size: 2vw;
+    color: #1E151C;
+}
+
+#supplies-list ul {
+    list-style-type: ol;
+    padding-left: 15px;
+}
+
+#supplies-list li {
+    margin: 2vh 0;
+    font-size: 1.5vw;
+}
+
+button {
+    font-size: 1vw;
+    padding: 0.5vw 1vw;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button[style*="gray"] {
+    cursor: not-allowed;
+}
+
+form[style*="inline"] button {
+    margin-left: 10px;
+}
+
+form[method="POST"] button[type="submit"] {
+    margin-left: 5px;
+}
+
+button[type="submit"] {
+    margin-left: 5px;
+}
+
+#footer {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 2vw;
+    color: #59382C;
+}

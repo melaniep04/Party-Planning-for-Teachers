@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <p id="form_instructions">It's simple! Just <strong>fill out</strong> the form below, click <strong><i>Create Party Supplies List</i></strong>, and <strong>copy and paste</strong> the party supplies URL (the web address at the top of the screen) to email out to parents!</p>
+    <p id="form_instructions">Parents will be able to <strong>claim</strong> items to donate, giving you an idea of what donations to expect. Once you've actually received a donation, you can mark items as <strong>received</strong> to prevent an unnecessary surplus of one item.</p>
+    <div class="form_container">
+        <form id="party-form" action="/create_party" method="POST" autocomplete="off">
+            <div class="form-group">
+            <label for="party_name" class="form_input">Party Name:</label>
+            <input type="text" id="party_name" name="party_name" placeholder="Fall Party, Winter Bash, etc." required>
+            </div>
+            <div class="form-group">
+            <label for="party_date" class="form_input">Party Date:</label>
+            <input type="text" id="party_date" name="party_date" placeholder="Date of Party" required>
+            </div>
+            <div class="form-group">
+            <label for="supplies_due_date" class="form_input">Donated Supplies Due By:</label>
+            <input type="text" id="supplies_due_date" name="supplies_due_date" placeholder="Date Donated Supplies are Due" required>
+            </div>
+            <div class="form-group">
+            <label for="supplies" class="form_input">Supplies Needed (Separated by Commas):</label>
+            <input type="text" id="supplies" name="supplies" placeholder="1 Dozen Cookies, 1 Dozen Cupcakes, Napkins, Paper Plates..." required>
+            </div>
+            <div class="form-group">
+            <label for="parent_note" class="form_input">Note to Caregivers:</label>
+            <input type="text" id="parent_note" name="parent_note" placeholder="Any contribution is greatly appreciated..." required>
+            </div>
+            <button type="submit" class="next-button-form">Create Party Supplies List</button>
+        </form>
+    </div>
+</body>
+</html>

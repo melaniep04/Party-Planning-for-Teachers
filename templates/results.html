@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Supplies List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>{{ party[1] }}</h1>
+    </header>
+    <div id="party-details">
+        <p><strong>Party Date:</strong> {{ party[2] }}</p>
+        <p><strong>Please Donate Supplies By:</strong> {{ party[3] }}</p>
+        <p><strong>Note from the Teacher:</strong> {{ party[4] }}</p>
+    </div>
+    <div id="supplies-list">
+        <h3>Supplies Requested:</h3>
+        <ul>
+            {% for supply in supplies %}
+                <li>
+                    {{ supply[1] }}
+                    <form action="{{ url_for('claim_supply', supply_id=supply[0]) }}" method="POST" style="display:inline;">
+                        <button type="submit" {% if supply[2] == 1 %}style="background-color: gray;"{% endif %}>{{ 'Parents: Click to Unclaim Donation' if supply[2] == 1 else 'Parents: Click to Claim Donation' }}</button>
+                    </form>
+                    <form action="{{ url_for('receive_supply', supply_id=supply[0]) }}" method="POST" style="display:inline;">
+                        <button type="submit" {% if supply[3] == 1 %}style="background-color: gray;"{% endif %}>{{ 'Teacher: Click to Unmark Donation as Received' if supply[3] == 1 else 'Teacher: Click to Mark Donation as Received' }}</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="footer">
+        <p><i>Thank you for your contributions!</i></p>
+    </div>
+</body>
+</html>
